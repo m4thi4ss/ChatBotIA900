@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <!-- Define o idioma da página como português do Brasil -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Garante que a página seja responsiva e se adapte à largura da tela do dispositivo -->
+
+    <title>ChatGpt Azure</title>
+    <!-- Título da aba do navegador -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Importa o arquivo de estilos CSS externo -->
+
+    <script src="scrypt.js" defer></script>
+    <!-- Importa o arquivo JavaScript externo e adia sua execução até que o HTML seja carregado -->
+  </head>
+
+  <body>
+    <!-- Corpo da página -->
+
+    <div class="chat-container">
+      <!-- Container principal do chat -->
+
+      <header class="header">ChatGpt Azure</header>
+      <!-- Cabeçalho do chat com título -->
+
+      <div class="chat-box" id="chatBox">
+        <!-- Área onde as mensagens aparecem -->
+        <div class="bot-message message">Olá Como posso ajudar você hoje</div>
+        <!-- Mensagem inicial enviada pelo "bot" -->
+      </div>
+
+      <div class="input-container">
+        <!-- Container que agrupa o campo de texto e o botão de envio -->
+
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Digite sua mensagem..."
+        />
+        <!-- Campo de texto para o usuário digitar a mensagem -->
+
+        <button onclick="sendMessage()">Enviar</button>
+        <!-- Botão para enviar a mensagem. Quando clicado, chama a função sendMessage() do JavaScript -->
+      </div>
+    </div>
+  </body>
+</html>

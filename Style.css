@@ -1,0 +1,112 @@
+/* Zera as margens, espaçamentos internos e define a fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estiliza o corpo da página centralizando tudo e aplicando um fundo com gradiente */
+body {
+    display: flex; /* Define o corpo como flex container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima de 100% da altura da tela */
+    background: linear-gradient(135deg, #232020, #B3001B); /* Fundo com gradiente diagonal */
+    color: #F8FFF4; /* Cor padrão do texto */
+}
+
+/* Container principal do chat */
+.chat-container {
+    width: 90%; /* Usa 90% da largura da tela */
+    max-width: 600px; /* Largura máxima de 600px */
+    background: #232020; /* Fundo escuro */
+    border-radius: 16px; /* Bordas arredondadas */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
+    display: flex; /* Flex container vertical */
+    flex-direction: column;
+}
+
+/* Cabeçalho do chat */
+.header {
+    background: #B3001B; /* Cor vermelha */
+    padding: 16px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5rem; /* Tamanho da fonte grande */
+    font-weight: bold; /* Negrito */
+}
+
+/* Área onde as mensagens aparecem */
+.chat-box {
+    flex: 1; /* Ocupa o espaço restante do container */
+    padding: 16px; /* Espaçamento interno */
+    overflow-y: auto; /* Rolagem vertical quando necessário */
+    display: flex;
+    flex-direction: column; /* Mensagens empilhadas verticalmente */
+    gap: 16px; /* Espaçamento entre as mensagens */
+    background: #1D1B1B; /* Fundo um pouco mais escuro */
+}
+
+/* Estilo comum para qualquer mensagem */
+.message {
+    max-width: 80%; /* Largura máxima da mensagem */
+    padding: 12px 16px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+}
+
+/* Estilo para mensagem do usuário (aparece à direita) */
+.user-message {
+    align-self: flex-end; /* Alinha à direita */
+    background: #B3001B; /* Fundo vermelho */
+    color: #F8FFF4; /* Cor do texto */
+}
+
+/* Estilo para mensagem do bot (aparece à esquerda) */
+.bot-message {
+    align-self: flex-start; /* Alinha à esquerda */
+    background: #3A3A3A; /* Fundo cinza escuro */
+    color: #F8FFF4; /* Cor do texto */
+}
+
+/* Container que contém o campo de entrada e o botão de envio */
+.input-container {
+    display: flex; /* Itens lado a lado */
+    padding: 16px; /* Espaçamento interno */
+    gap: 8px; /* Espaço entre o input e o botão */
+    background: #1D1B1B; /* Fundo escuro */
+}
+
+/* Estiliza o campo de texto */
+input[type="text"] {
+    flex: 1; /* Ocupa o máximo de espaço possível */
+    padding: 12px; /* Espaçamento interno */
+    border: 2px solid #B3001B; /* Borda vermelha */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    background: #2e2c2c; /* Fundo escuro */
+    color: #F8FFF4; /* Cor do texto */
+}
+
+input[type="text"]::placeholder{
+    color: #b3b3b3
+}
+
+button{
+    padding: 12px 16px;
+    background: #B3001B;
+    color: #F8FFF4;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0,3s;
+}
+
+button:hover {
+    background: #240106;
+}
+
+button:active {
+    transform: scale(1.05);
+}
